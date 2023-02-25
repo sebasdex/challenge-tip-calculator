@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Tip Calculator</title>
+</head>
+
+<body class="bg-[#c5e4e7] font-[SpaceMono]">
+    <main>
+        <div class="container bg-[#c5e4e7] min-h-screen flex flex-col justify-center items-center m-auto pb-10">
+            <header class="flex flex-col uppercase justify-center items-center p-14 lg:-mt-52">
+                <h1 class="text-4xl leading-[3rem] text-[#00494d] tracking-[0.6rem] font-bold lg:-mt-10 lg:mb-10">
+                    Spli<br>tter</h1>
+            </header>
+            <form class="bg-white rounded-3xl flex flex-col p-5 pt-10 justify-center items-center 
+                lg:flex-row lg:gap-10 lg:h-[40rem] lg:w-[60rem] lg:p-14" action="#" id="form-bill">
+                <div class="flex flex-col justify-between gap-7 w-80 lg:w-full lg:h-full">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between">
+                            <label for="bill" id="label-bill" class="text-[#00494d] tracking-wider">Bill</label>
+                        </div>
+                        <div class="bg-[#f4fafa] flex items-center justify-between">
+                            <span class="material-symbols-outlined absolute text-[#c5e4e7] pl-2">attach_money</span>
+                            <input type="text" class="bg-[#f4fafa] p-3 rounded-md w-full text-[#00494d] text-2xl font-bold
+                             text-right focus:border-[#26c0ab] focus:outline-none focus:border-2 border-2 border-transparent" placeholder="0" id="bill">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 justify-center items-center w-80 lg:w-full">
+                        <h1 class="text-[#00494d] pb-5 self-start tracking-wider">Select Tip %</h1>
+                        <div class="flex justify-between text-white gap-3 w-80 flex-wrap lg:w-full">
+                            <div
+                                class="bg-[#00494d] hover:bg-[#26c0ab] hover:text-[#00494d] h-16 w-36 rounded-lg flex justify-center items-center cursor-pointer lg:w-28 percent" id="5">
+                                <p class="text-2xl font-bold">5%</p>
+                            </div>
+                            <div
+                                class="bg-[#00494d] hover:bg-[#26c0ab] hover:text-[#00494d] h-16 w-36 rounded-lg flex justify-center items-center cursor-pointer lg:w-28 percent" id="10">
+                                <p class="text-2xl font-bold">10%</p>
+                            </div>
+                            <div
+                                class="bg-[#00494d] hover:bg-[#26c0ab] hover:text-[#00494d] h-16 w-36 rounded-lg flex justify-center items-center cursor-pointer lg:w-28 percent" id="15">
+                                <p class="text-2xl font-bold">15%</p>
+                            </div>
+                            <div
+                                class="bg-[#00494d] hover:bg-[#26c0ab] hover:text-[#00494d] h-16 w-36 rounded-lg flex justify-center items-center cursor-pointer lg:w-28 percent" id="25">
+                                <p class="text-2xl font-bold">25%</p>
+                            </div>
+                            <div
+                                class="bg-[#00494d] hover:bg-[#26c0ab] hover:text-[#00494d] h-16 w-36 rounded-lg flex justify-center items-center cursor-pointer lg:w-28 percent" id="50">
+                                <p class="text-2xl font-bold">50%</p>
+                            </div>
+                            <div
+                                class="bg-[#00494d] h-16 w-36 rounded-lg flex justify-center items-center cursor-pointer lg:w-28">
+                                <input type="text" name="custom" id="custom"
+                                    class="p-5 text-[#00494d] text-2xl font-bold w-full h-full bg-[#f4fafa] focus:outline-[#26c0ab] focus:outline outline-offset-2 rounded-md placeholder:text-[#00494d] text-right lg:text-lg"
+                                    placeholder="Custom">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 justify-center pb-8 w-80 lg:w-full lg:pb-0">
+                       <div class="flex justify-between">
+                        <label for="bill" id="people-label" class="text-[#00494d] tracking-wider self-start">Number of People</label>
+                       </div>
+                        <div class="bg-[#f4fafa] flex items-center justify-between w-full">
+                            <span class="material-symbols-outlined absolute text-[#c5e4e7] pl-2">person_filled</span>
+                            <input type="text" class="bg-[#f4fafa] p-3 rounded-md w-full text-[#00494d] text-2xl font-bold
+                             text-right focus:border-[#26c0ab] focus:outline-none focus:border-2 border-2 border-transparent" placeholder="0" id="people">
+                        </div>
+                    </div>
+                </div>
+                <!-- Tip Amount Section -->
+                <div class="w-80 lg:h-full lg:w-full">
+                    <div
+                        class="bg-[#00494d] flex flex-col justify-between p-8 pt-11 gap-8 text-white rounded-xl self-center h-full">
+                        <div class="flex flex-col gap-8 w-full">
+                            <div class="flex justify-between w-full">
+                                <div>
+                                    <p class="text-lg font-medium" >Tip Amount</p>
+                                    <small class="text-[#c5e4e7ae] font-bold">/ person</small>
+                                </div>
+                                <p class="text-[#26c0ab] font-bold text-3xl lg:text-5xl" id="tip-amt">$0.00</p>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-lg font-medium">Total</p>
+                                    <small class="text-[#c5e4e7ae] font-bold">/ person</small>
+                                </div>
+                                <p class="text-[#26c0ab] font-bold text-3xl lg:text-5xl" id="tip-total">$0.00</p>
+                            </div>
+                        </div>
+                        <button
+                            class="p-2 bg-[#26c0ab] opacity-25 rounded-lg uppercase text-[#00494d] font-bold text-2xl"
+                            type="reset" disabled id="btn-reset">Reset</button>
+                    </div>
+                </div>
+                <!-- End Tip Amount Section -->
+            </form>
+        </div>
+    </main>
+</body>
+<script src="js/app.js"></script>
+</html>
